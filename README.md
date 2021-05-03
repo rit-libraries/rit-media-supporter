@@ -21,4 +21,4 @@ const {getAudioDuration, getVideoDuration} = require('rit-media-supporter')
 
 # License
 
-MIT. Based on [rit-media-supporter](https://github.com/RIT-NODE/media).
+MIT. Based on [rit-media-supporter](https://github.com/rit-libraries/rit-media-supporter).
