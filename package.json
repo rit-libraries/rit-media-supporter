@@ -1,0 +1,23 @@
+{
+  "name": "rit-media-supporter",
+  "version": "1.0.0",
+  "description": "Get the duration of video or audio files/streams with `ffmpeg`",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RIT-NODE/media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RIT-NODE/media/issues"
+  },
+  "homepage": "https://github.com/RIT-NODE/media#readme",
+  "dependencies": {
+    "ffmpeg": "0.0.4"
+  }
+}
