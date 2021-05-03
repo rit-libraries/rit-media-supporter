@@ -1,19 +1,28 @@
-const ffmpeg = require('ffmpeg');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
-module.exports.getAudioDuration = function (audio) {
-    return new ffmpeg(audio).then(function (audioInfo) {
-        return audioInfo['metadata']['duration']['seconds']
-    }, function (e) {
-        console.log(e.code);
-        console.log(e.msg);
-    });
+module.exports.getAudioDuration = async function (audio) {
+    let duration = 0
+    try {
+        const cmd = `ffmpeg -i ${audio} 2>&1 | grep Duration | awk '{print $2}' | tr -d ,`;
+        const {stdout} = await exec(cmd)
+        const parts = stdout.split(".")[0].split(":")
+        duration = parseInt(parts[0]) * 60 + parseInt(parts[1]) * 60 + parseInt(parts[2])
+    } catch (e) {
+        console.error(e)
+    }
+    return duration
 };
 
-module.exports.getVideoDuration = function (video) {
-    return new ffmpeg(video).then(function (videoInfo) {
-        return videoInfo['metadata']['duration']['seconds']
-    }, function (e) {
-        console.log(e.code);
-        console.log(e.msg);
-    });
+module.exports.getVideoDuration = async function (video) {
+    let duration = 0
+    try {
+        const cmd = `ffmpeg -i ${video} 2>&1 | grep Duration | awk '{print $2}' | tr -d ,`;
+        const {stdout} = await exec(cmd)
+        const parts = stdout.split(".")[0].split(":")
+        duration = parseInt(parts[0]) * 60 + parseInt(parts[1]) * 60 + parseInt(parts[2])
+    } catch (e) {
+        console.error(e)
+    }
+    return duration
 };

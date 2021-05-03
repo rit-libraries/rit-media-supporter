@@ -5,6 +5,11 @@ Get the duration of video or audio files/streams with `ffmpeg`.
 # Install
 
 ```bash
+
+FOR Ubuntu: sudo apt update && sudo apt install ffmpeg
+
+FOR MAC: brew install ffmpeg
+
 $ npm install --save rit-media-supporter
 ```
 
