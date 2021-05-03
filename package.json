@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RIT-NODE/media.git"
+    "url": "git+https://github.com/rit-libraries/rit-media-supporter.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RIT-NODE/media/issues"
+    "url": "https://github.com/rit-libraries/rit-media-supporter/issues"
   },
-  "homepage": "https://github.com/RIT-NODE/media#readme",
+  "homepage": "https://github.com/rit-libraries/rit-media-supporter#readme",
   "dependencies": {
     "ffmpeg": "0.0.4"
   }
