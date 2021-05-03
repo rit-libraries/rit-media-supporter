@@ -1,6 +1,6 @@
 {
   "name": "rit-media-supporter",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "Get the duration of video or audio files/streams with `ffmpeg`",
   "main": "index.js",
   "scripts": {
